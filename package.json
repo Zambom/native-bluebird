@@ -1,0 +1,21 @@
+{
+  "name": "native-bluebird",
+  "version": "1.0.0",
+  "description": "Implementation of Bluebird's functionalities using native promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit --inspect \"resources/**/*.test.js\""
+  },
+  "keywords": [
+    "native-promises",
+    "bluebird",
+    "parallelism",
+    "concurrency"
+  ],
+  "author": "Erik Zambom",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "mocha": "^10.7.3"
+  }
+}
