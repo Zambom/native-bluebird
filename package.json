@@ -6,16 +6,24 @@
   "scripts": {
     "test": "mocha --exit --inspect \"resources/**/*.test.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zambom/native-bluebird.git"
+  },
   "keywords": [
     "native-promises",
     "bluebird",
     "parallelism",
     "concurrency"
   ],
-  "author": "Erik Zambom",
+  "author": "Erik Zambom <erikzambom@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.5.0",
     "mocha": "^10.7.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Zambom/native-bluebird/issues"
+  },
+  "homepage": "https://github.com/Zambom/native-bluebird#readme"
 }
