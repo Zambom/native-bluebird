@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Zambom/native-bluebird/issues"
   },
-  "homepage": "https://github.com/Zambom/native-bluebird#readme"
+  "homepage": "https://github.com/Zambom/native-bluebird#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
