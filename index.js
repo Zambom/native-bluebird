@@ -1,10 +1,10 @@
-const asyncFilter = require("./resources/filter")
-const asyncMap = require("./resources/map")
+const filter = require("./resources/filter")
+const map = require("./resources/map")
 const { delay } = require("./resources/utils")
 
 
 module.exports = {
-  asyncFilter,
-  asyncMap,
+  filter,
+  map,
   delay
 }

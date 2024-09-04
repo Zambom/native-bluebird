@@ -22,11 +22,11 @@ The usage of the functions in this package are similar to its Bluebird's counter
 
 ### Map function
 ```js
-import { asyncMap } from 'native-bluebird'
+import { map } from 'native-bluebird'
 
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const result = await asyncMap(array, function (item) {
+const result = await map(array, function (item) {
     return item * 2
 }, { concurrency: 2 })
 
@@ -35,11 +35,11 @@ console.log(result) // [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
 ### Filter function
 ```js
-import { asyncFilter } from 'native-bluebird'
+import { filter } from 'native-bluebird'
 
 const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-const result = await asyncFilter(array, function (item) {
+const result = await filter(array, function (item) {
     return item % 2 === 0
 }, { concurrency: 2 })
 
