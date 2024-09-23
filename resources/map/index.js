@@ -33,9 +33,14 @@ async function map(iterable, mapper, options = {}) {
 
   // Function to process the batches
   async function processBatch (batch) {
-    const promises = batch.map(async ([item, pos]) => {
-      results.set(pos, await mapper(item, pos))
-    })
+    const promises = []
+    
+    for (const [item, pos] of batch) {
+      promises.push(new Promise(async (resolve, reject) => {
+        results.set(pos, await mapper(item, pos))
+        resolve()
+      }))
+    }
 
     // Waiting for all promises in the batch to resolve
     await Promise.allSettled(promises)
@@ -75,8 +80,8 @@ async function map(iterable, mapper, options = {}) {
 
   await processAll()
 
-  // Getting the values from the Map
-  return Array.from(results.values())
+  // Getting sorted values from the Map
+  return Array.from([...results].sort((a, b) => a[0] - b[0]), (value, index) => value[1])
 }
 
 module.exports = map
