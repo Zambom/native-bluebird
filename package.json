@@ -1,6 +1,6 @@
 {
   "name": "native-bluebird",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Implementation of Bluebird's functionalities using native promises",
   "main": "index.js",
   "scripts": {
